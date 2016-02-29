@@ -3,6 +3,15 @@ Assignments for Udacity Deep Learning class with TensorFlow
 
 Course information can be found at https://www.udacity.com/course/deep-learning--ud730
 
+Creating a Docker Machine
+-------------------------------------------------------------
+
+    docker-machine create --virtualbox-memory 4096 --driver virtualbox default
+
+After the machine is started, add a port forward rule for the Jupyter service:
+
+    VBoxManage controlvm "default" natpf1 "jupyter,tcp,127.0.0.1,8888,,8888";
+
 Running the Docker container from the Google Cloud repository
 -------------------------------------------------------------
 
